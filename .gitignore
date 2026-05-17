@@ -1,0 +1,12 @@
+# Python runtime artifacts
+__pycache__/
+*.pyc
+
+# Local runtime output plots (Keeps repo clean)
+Outputs/
+
+# Environment configurations
+.venv/
+env/
+.idea/
+.vscode/

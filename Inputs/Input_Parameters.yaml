@@ -1,0 +1,37 @@
+
+Flight_Conditions:
+   Altitude_ft  : [0, 20000, 21500, 24000, 30000]          # Targeted altitudes for V-n diagram calculation [ft]
+
+Design_Velocities:
+   
+   Cruise_Speed: 
+       V_C          : 250           # Design cruise speed - EAS  [Kts] for thealtitudes between  0 ft and 25,000 ft
+       VC2MC_alt    : 25000         # The boundary altitude where the definition of cruise speed changes from Vc to Mc.
+       M_C          : 0.56          # Design cruise mach number [-] for altitudes greater than 25,000 ft      
+
+  
+   Dive_Speed: 
+       V_D          : 310           # Design dive speed - EAS  [Kts] for thealtitudes between  0 ft and 20,000 ft
+       VD2MD_alt    : 20000         # The boundary altitude where the definition of dive speed changes from Vc to Mc.
+       M_D          : 0.69          # Design dive mach number [-] for altitudes greater than 20,000 ft   
+
+General_Parameters:
+   g                : 9.80665       # Gravitational acceleration [m/s^2]
+
+AC_Design_Properties:
+   MTOW            : 9500           # Design Maximum Takeoff Weight [kg]
+   Wing_Area       : 45             # Wing Reference Area [m^2]
+
+   Aerodynamic_Parameters: 
+       CL_max      :  1.65          # Positive Maximum Lift Coefficient (flaps retracted - clean configuration) 
+       CL_min      : -0.8           # Positive Maximum Lift Coefficient (flaps retracted - clean configuration) 
+  
+# CS-25 structural load factor limits
+Load_Factor_Limits:
+    n_negative     :  -1.0          # Negative Limit Load Factor (CS-25 negative g limit) 
+
+Unit_Conversion_Constants:
+    kts_2_ms       : 0.514444       # Convert Knots/seconds to Meters/ Second
+    ft_2_m         : 0.3048         # Convert Feet to Meters
+    kg_2_lbs       : 2.2046226218   # Convert kilogram to pound
+    
